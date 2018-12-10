@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     #dependency
     'rest_framework',
-
+    'django_extensions',
     #my app
     'cv',
 ]
