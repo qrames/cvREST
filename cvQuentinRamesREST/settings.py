@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-
+from top_secret import postgresqlAdmin
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -84,8 +84,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         # 'ENGINE': 'django.contrib.gis.db.backends.postgis', #mettre engine de posgres
         'NAME': 'cv_db',
-        'USER': '',
-        'PASSWORD': '',
+        'USER': postgresqlAdmin.get("user"),
+        'PASSWORD': postgresqlAdmin.get("password"),
     }
 }
 
