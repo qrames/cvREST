@@ -10,9 +10,15 @@ class Work(models.Model):
   image = models.ImageField(upload_to='works')
   url = models.URLField(null=True, blank=True)
 
+  def __unicode__(self):
+      return self.name
+
 
 class Technologie(models.Model):
   name = models.CharField(max_length=50)
   icon = models.CharField(max_length=50)
   progress = models.PositiveSmallIntegerField()
   url = models.URLField(null=True, blank=True)
+
+  def __unicode__(self):
+      return self.name
