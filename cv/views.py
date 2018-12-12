@@ -4,8 +4,13 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from .serializers import TechnologieSerializer, WorkSerializer
-from .models import Technologie, Work
+from .serializers import TechnologieSerializer, WorkSerializer, CategorySerializer
+from .models import Technologie, Work, Category
+
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
 
 
 class TechnologieViewSet(viewsets.ModelViewSet):

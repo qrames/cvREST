@@ -16,11 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
-from cv.views import TechnologieViewSet, WorkViewSet
+from cv.views import TechnologieViewSet, WorkViewSet, CategoryViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
+router.register(r'categories', CategoryViewSet)
 router.register(r'technologies', TechnologieViewSet)
 router.register(r'works', WorkViewSet)
 
