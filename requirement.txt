@@ -1,7 +1,9 @@
 Django
 django-cors-headers
 djangorestframework
+djangorestframework-gis
 Pillow
 psycopg2
 django-extensions
 django-colorful
+django-leaflet

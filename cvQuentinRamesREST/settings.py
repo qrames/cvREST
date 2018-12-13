@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     #dependency
     'rest_framework',
+    'rest_framework_gis',
+    'leaflet',
     'corsheaders',
     'django_extensions',
     'colorful',
