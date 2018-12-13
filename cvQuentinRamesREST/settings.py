@@ -88,8 +88,8 @@ WSGI_APPLICATION = 'cvQuentinRamesREST.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        # 'ENGINE': 'django.contrib.gis.db.backends.postgis', #mettre engine de posgres
+        # 'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis', #mettre engine de posgres
         'NAME': 'cv_db',
         'USER': postgresqlAdmin.get("user"),
         'PASSWORD': postgresqlAdmin.get("password"),
