@@ -3,7 +3,10 @@
 
 
 from rest_framework import serializers
-from .models import Work, Technologie, Category
+from rest_framework_gis.serializers import GeoFeatureModelSerializer, GeometrySerializerMethodField
+
+from .models import Work, Technologie, Category, GeoPoint
+
 
 class CategorySerializer(serializers.ModelSerializer):
 
@@ -24,3 +27,11 @@ class WorkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Work
         fields = '__all__'
+
+
+class GeoPointSerializer(GeoFeatureModelSerializer):
+
+    class Meta:
+        model = GeoPoint
+        geo_field = 'geom'
+        fields = ('name', 'geom')

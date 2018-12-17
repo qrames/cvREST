@@ -4,8 +4,9 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from rest_framework import viewsets
 
+from .serializers import GeoPointSerializer
 from .serializers import TechnologieSerializer, WorkSerializer, CategorySerializer
-from .models import Technologie, Work, Category
+from .models import Technologie, Work, Category, GeoPoint
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
@@ -21,3 +22,8 @@ class TechnologieViewSet(viewsets.ModelViewSet):
 class WorkViewSet(viewsets.ModelViewSet):
     queryset = Work.objects.all()
     serializer_class = WorkSerializer
+
+
+class GeoPointViewSet(viewsets.ModelViewSet):
+    queryset = GeoPoint.objects.all()
+    serializer_class = GeoPointSerializer
